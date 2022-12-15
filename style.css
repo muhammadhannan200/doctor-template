@@ -1,0 +1,662 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    
+    font-family: sans-serif;
+  
+
+
+}
+.container{
+margin-left: var(--pad);
+margin-right: var(--pad);
+}
+body{
+    width: 100%;
+}
+:root{
+    --overlay:#366370b1;
+    --btn:#0FB0AF;
+    --icon:#14BAB8;
+    --text:#C9B8AC;
+    --headtext:#2B2522;
+    --section:#0CB8B6;
+    --second_section:#EEEEEE;
+    --bgfooter:#29302E;
+    --pad:60px;
+}
+/* header */
+header {
+    background: #29302e22;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+header .logo{
+    width: 100px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+header .logo img{
+    width: 100%;
+    height: 100%;
+}
+header  .menu_icon {
+background-color: #fff;
+padding: 15px;
+color: black;
+position: relative;
+cursor: pointer;
+
+}
+header  ul{
+    border-top: solid 3px white;
+    background-color: var(--overlay);
+    color: white;
+    padding-right:200px ;
+    position: absolute;
+    right: +2%;
+    text-align: left;
+    bottom: -220%;
+    display: none;
+    z-index: 10000;
+    cursor: pointer;
+    
+}
+
+
+header ul li a {
+    transition: 0.2s;
+    color: white;
+    overflow: hidden;
+
+}
+
+header  ul li{
+    padding:  15px ;
+    text-align: left;
+}
+header  ul li.active{
+    background-color: rgba(221, 221, 221, 0.491);
+}
+
+@media (max-width:992px) {
+
+
+    header .menu_icon:hover + ul , ul:hover  {
+        display: block;
+        z-index: 1000;
+    }
+    header  ul li.active{
+        background-color:transparent;
+    }
+    header  ul li a:hover{
+        margin-left: 20px;
+    
+    }
+    
+    }
+@media (min-width:992px) {
+    .menu_icon {
+        display: none;
+    }
+    header ul {
+        display: block;
+        position: relative;
+        border:none;
+        background-color:transparent  ;
+        display: flex;
+        color: white;
+        text-align: left;
+        bottom: -220%;
+        /* display: none; */
+        z-index: 10000;
+        cursor: pointer;
+        
+    }
+    
+    
+}
+
+/* end header */
+
+/* start landing */
+section.landing{
+    padding-top: var(--pad);
+    background-image: url("img/bg-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    position: relative; 
+    padding-bottom: var(--pad);
+    width: 100%;
+    /* padding: 25px; */
+    
+    
+}
+
+/* over lay */
+section.landing::before{ 
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay);
+    z-index: 0;
+   
+}
+section.landing .test{
+position: relative;
+color: white;
+margin: var(--pad) auto;
+width: 80%;
+
+}
+section.landing  .test .info{
+    width: 100%;
+    text-align: center;
+    
+}
+section.landing  .test h2{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 1rem;
+
+}
+section.landing .test p {
+
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    
+    
+}
+section.landing .test a{
+    font-size:calc( 0.7rem );
+    display: inline-block;
+    color: white;
+    margin-top: 10px;
+    background-color: var(--btn);
+    padding: 12px;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+section.landing .test a:hover{
+    color: var(--btn);
+    background-color: white;
+    transform: scale(0.9);
+}
+
+section.landing .container i:last-child{
+    color: white ;
+    font-size: 30px;
+    position:absolute;
+    bottom: 2px;
+    cursor: pointer;
+}
+@media (min-width:786px) {
+    section.landing{
+        height: 70vh;
+    }
+    section.landing .test a{
+        padding: 20px;
+    }
+}
+@media (min-width:992px) {
+    
+}
+/* end landing */
+
+
+/* start services */
+section.service{
+    
+    padding-top: var(--pad);
+    padding-bottom: var(--pad);
+
+}
+/* @media (min-width:600px) {
+    section.service .container{
+    margin-left: 10px;
+}
+} */
+section.service .box-info h2{
+    text-align: left;
+    position: relative;
+    margin-bottom: 30px;
+}
+section.service .box-info h2::before{
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 8%;
+    background-color: orange;
+    bottom: -10px;
+    bottom: -5px;
+    left: 1%;
+}
+section.service .box-info p{
+    color: #ccc;
+    margin-bottom: 20px;
+    text-align: left;
+}
+section.service .serv {
+    text-align: left;
+    margin-bottom: 30px;
+    
+
+}
+section.service .serv i{
+    color: var(--icon);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+section.service .serv  h2{
+    text-align: left;
+    margin-bottom: 20px ;
+    
+}
+section.service .serv p{
+    color: #ccc;
+    
+}
+@media (min-width:786px) {
+    section.service .container{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    section.service .box-info{
+        flex: 1 1 calc(60%  - 20px);
+    }
+    section.service .servs{
+        display: flex;
+    }
+    section.service .serv{
+        margin: 10px;
+    }
+}
+@media (min-width:992px) {
+    section.service .container{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    section.service .box-info{
+        flex: 1 1 calc(50%  - 20px);
+    }
+    section.service .servs{
+        display: flex;
+    }
+    section.service .serv{
+        margin: 10px;
+    }
+}
+/* end services */
+
+
+/* start extra */
+
+/* @media (min-width:600px) {
+    section.extra .container{
+    margin-left: 10px;
+}
+} */
+
+section.extra .text{
+    background-color: var(--section);
+    color: white;
+    border-bottom: 2px solid white;
+    padding: 30px;
+}
+section.extra .text h2,section.extra .text p,section.extra .text a{
+    text-align: left;
+    margin-bottom: 10px;
+}
+section.extra .text a{
+    margin-top: 15px;
+    text-transform: uppercase;
+    color: white;
+    border: white solid 2px;
+    padding: 6px;
+    display: block;
+    width: fit-content;
+    transition: 0.5s;
+
+}
+
+section.extra .text a:hover{
+    background-color: white;
+    color: var(--section);
+    transform: scale(0.85);
+}
+@media (min-width:786px) {
+    .container .extra{
+        display: flex;
+    }
+    .container .extra .text{
+        border-right: 2px white solid;
+    }
+}
+@media (min-width:992px) {
+    .container .extra{
+        display: flex;
+    }
+    .container .extra .text{
+        border-right: 2px white solid;
+    }
+}
+/* end extra */
+
+/* doctors */
+section.doctors{
+    padding-top: var(--pad);
+    padding-bottom: var(--pad);
+    width: 100%;
+}
+section.doctors >h2{
+    text-align: left;
+    position: relative;
+    margin-bottom: 20px;
+}
+section.doctors > h2::before{
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 10%;
+    background-color: orange;
+    bottom: -10px;
+    bottom: -5px;
+    left: 1%;
+    /* margin-bottom: 15px; */
+}
+section.doctors .item{
+    border:2px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-shadow: 30px 0 80px -80px  rgba(0, 0, 0, 0.646),
+    -30px 0 80px -80px  rgba(0, 0, 0, 0.646);
+}
+section.doctors .item img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+section.doctors .item h2,section.doctors .item h4,section.doctors .item  .social{
+text-align: left;
+margin-bottom: 10px;
+font-weight: 400;
+}
+section.doctors .item h4{
+color: #ccc;
+}
+
+@media (min-width:786px) {
+ 
+    section.doctors .images{
+        display: flex; 
+        flex-wrap: wrap; 
+    }
+    section.doctors .images .item{
+   flex: calc(40% - 20px);
+    margin: 20px;
+    }
+}
+@media (min-width:992px) {
+    section.doctors .images{
+        display: flex;
+       
+        
+    }
+    section.doctors .images .item{
+        flex: calc(20% - 20px);
+        margin: 20px;
+    }
+}
+/* testmo */
+section.testimpones{
+    background-color: #ccc;
+    padding: 30px;
+
+}
+section.testimpones h2{
+    text-align: left;
+    position: relative;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+section.testimpones > h2::before{
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 10%;
+    background-color: orange;
+    bottom: -10px;
+    bottom: -5px;
+    left: 1%;
+}
+section.testimpones .test p{
+    font-size: 0.7rem;
+    background-color: white;
+    padding: 15px;
+    position: relative;
+    line-height: 1.6;
+}
+section.testimpones .test p::after{
+    position: absolute;
+    content: "";
+    border: solid 17px white;
+    border-color: transparent transparent transparent white;
+    left: 14%;
+    bottom: -9%;
+
+    }
+    section.testimpones .test img{
+        position: relative;
+        margin: 15px;
+        left: -40%; 
+ }
+ 
+ section.testimpones .test h1{
+    font-size: 1rem;
+   position: relative;
+   left: 25%;
+    bottom: 80px;
+    width: fit-content;
+    width: fit-content;
+ }
+
+ @media (min-width:786px) {
+    section.testimpones .test-box{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    section.testimpones .test-box .test{
+        flex: calc(30% - 20px);
+        margin: 20px;
+    }
+    
+}
+@media (min-width:992px) {
+}
+/* end test */
+
+
+/* start bottom part */
+  .bottom_part{
+    padding-top: var(--pad);
+    padding-bottom: var(--pad);
+    background-color: #333;
+    
+ }
+ .bottom_part .container h2,.bottom_part .container p{
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-align: left;
+ }
+ .bottom_part .container p{
+    font-size: 1rem;
+    color: #ccc;
+    position: relative;
+ }
+ .bottom_part .container p span{
+    position: absolute;
+    top: 50px;
+    color: var(--btn);
+    margin: 0;
+    text-align: right;
+    position: relative;
+    right: -30%;
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+ }
+ 
+ @media (min-width:786px) {
+  .bottom_part div.container{
+    display: flex;
+    /* flex-wrap: wrap; */
+  }
+  .bottom_part div.container:first-child{
+    flex: 45%;
+  }
+  .bottom_part div.container:last-child{
+    flex: 45%;
+  }
+  
+}
+@media (min-width:992px) {
+}
+
+ /* end bottom part */
+
+
+
+ /* conatact  */
+ section.contact{
+    padding-top: var(--pad);
+    padding-bottom:var(--pad) ;
+ } 
+ section.contact h1{
+    text-align: left;
+    position: relative;
+    margin-bottom: 30px;
+}
+section.contact > h1::before{
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 8%;
+    background-color: orange;
+    bottom: -10px;
+    bottom: -5px;
+    left: 1%;
+}
+section.contact  .box-info h2{
+    text-align: left;
+    margin-bottom: 30px;
+}
+section.contact  .box-info .item {
+    display: flex;
+    margin-bottom: 30px;
+}
+section.contact  .box-info .item p{
+    text-align: left;
+    margin-left: 10px;
+}
+section.contact  .box-info .item i{
+text-align: left;
+color: #ccc;
+font-size: 1.5rem;
+}
+section.contact   form input{
+    padding: 10px;
+    display: block;
+    width: 90%;
+    height: 50px;
+    margin: 30px 5px;
+    text-transform: capitalize;
+    text-align: left;
+    
+}
+section.contact   form input[type="submit"]{
+    display: block;
+    width: fit-content;
+    padding: 10px;
+    background-color: var(--btn);
+    color: white;
+    border: none;
+    margin-right: auto;
+    transition: 0.5s;
+    border-radius: 5px;
+    cursor: pointer;
+}
+section.contact   form input[type="submit"]:hover{
+    color: var(--btn);
+    background-color: white;
+    border: var(--btn) 2px solid;
+}
+@media (min-width:786px) {
+    .contact-box{display: flex;}
+    .contact-box .box-info{
+        flex: calc(100% - 60% - 30px);
+        margin: 30px;
+    }
+    .contact-box form {
+        flex: 60%;
+        margin: 30px;
+    }
+}
+
+
+/* end conatct  */
+
+/* footer */
+footer {
+    background-color: #366370f5;
+    color: white;
+    padding-top: var(--pad);
+    padding-bottom: var(--pad);
+    font-size: 1rem;
+}
+footer div{
+    margin: 25px 10px;
+    text-align: left;
+}
+footer div >h2 {
+    text-align: left;
+    margin-bottom: 10px;
+
+}
+footer div p{
+    text-align: left;
+}
+footer div.sec-two ul li{
+    list-style:disc inside;
+    text-align: left;
+    
+}
+
+@media (min-width:786px) {
+    footer{
+        display: flex;
+        
+    }
+    footer div {
+        flex: calc(100%/3 );
+        /* margin-right: 10px; */
+    }
+
+ }
